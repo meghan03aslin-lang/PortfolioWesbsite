@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Secondary Navigation</title>
+    <!-- MANDATORY: Bootstrap CSS Link to enable classes like row, col, card, etc. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        /* --- CUSTOM STYLES START HERE (From your provided code) --- */
+        
+        /* 1. General Body/Page Styling: LIGHTER RED Background, White Text */
+        body {
+          background-color: #A05252; /* Light Red / Rosy Brown */
+          color: #FFFFFF; /* White text for everything */
+        }
+        
+        /* Ensure other text that uses Bootstrap's text-body-secondary is white */
+        .text-body-secondary,
+        .text-body-secondary a {
+          color: #FFFFFF !important;
+        }
+
+        /* 2. Header and Footer (Navigation Bar) to MEDIUM RED */
+        header,
+        .navbar.bg-dark,
+        footer {
+          background-color: #8B0000 !important; /* Medium Dark Red */
+        }
+
+        /* 3. Hero Video Container Styles (Keeping these for completeness, though not in the snippet) */
+        .hero-video-container {
+          position: relative; 
+          overflow: hidden; 
+          min-height: 100vh; 
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+
+        /* The video element itself */
+        #bg-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: 0; 
+          object-fit: contain; 
+          background-color: #000; 
+        }
+
+        /* The text and buttons content wrapper (put on top of video) */
+        .hero-content {
+          position: relative; 
+          z-index: 1; 
+          height: 100vh; 
+          display: flex; 
+          align-items: center; 
+          color: white !important; 
+        }
+
+        /* Ensure text over the video is clearly visible */
+        .hero-content .fw-light, .hero-content .lead {
+             color: white !important;
+             text-shadow: 2px 2px 4px #000000; 
+        }
+        
+        /* 4. Album Card Styles (The 3 images below the video) to DARKER RED */
+        .album.py-5.bg-body-tertiary {
+          background-color: inherit !important; 
+        }
+        
+        .card {
+          background-color: #690000 !important; /* Darker Red for contrast */
+          border: 1px solid #FFFFFF; 
+          transition: transform 0.2s ease-in-out; 
+        }
+
+        /* Hover effect to indicate clickability */
+        .col a:hover .card {
+             transform: translateY(-5px);
+             border-color: #FFD700; 
+        }
+
+        /* Ensure all text within the card body is white */
+        .card-body, .card-text {
+          color: #FFFFFF !important;
+        }
+
+        /* --- EXISTING BOOTSTRAP STYLES BELOW --- (Kept for reference but not critical) */
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Photo Types</h1>
+                <p class="lead text-body-secondary">Explore the different facets of my work below.</p>
+              </div>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <!-- FIX APPLIED: The row-cols-sm-3 class enforces 3 columns (horizontal) on screens 576px and wider. -->
+                <!-- The row-cols-1 ensures a stack (vertical) on tiny mobile screens for better viewing. -->
+                <div class="row row-cols-1 row-cols-sm-3 g-3">
+                  
+                    <div class="col">
+                        <a href="photography.html" class="text-decoration-none">
+                            <div class="card shadow-sm">
+                                <img 
+                                    src="img/Portrait.jpeg" 
+                                    class="bd-placeholder-img card-img-top" 
+                                    alt="Photography Portfolio" 
+                                    width="100%" 
+                                    height="225" 
+                                    style="object-fit: cover;"
+                                />
+                                <div class="card-body">
+                                    <p class="card-text fw-bold">
+                                        Portraits
+                                    </p>
+                                    <div
+                                        class="d-flex justify-content-end align-items-center"
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                  
+                    <div class="col">
+                        <a href="campaign-work.html" class="text-decoration-none">
+                            <div class="card shadow-sm">
+                                <img 
+                                    src="img/Global.jpeg" 
+                                    class="bd-placeholder-img card-img-top" 
+                                    alt="Campaign Work Portfolio" 
+                                    width="100%" 
+                                    height="225" 
+                                    style="object-fit: cover;"
+                                />
+                                <div class="card-body">
+                                    <p class="card-text fw-bold">
+                                        Global
+                                    </p>
+                                    <div
+                                        class="d-flex justify-content-end align-items-center"
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                  
+                    <div class="col">
+                        <a href="videography.html" class="text-decoration-none">
+                            <div class="card shadow-sm">
+                                <img 
+                                    src="img/Event.jpeg" 
+                                    class="bd-placeholder-img card-img-top" 
+                                    alt="Videography Portfolio" 
+                                    width="100%" 
+                                    height="225" 
+                                    style="object-fit: cover;"
+                                />
+                                <div class="card-body">
+                                    <p class="card-text fw-bold">
+                                        Event
+                                    </p>
+                                    <div
+                                        class="d-flex justify-content-end align-items-center"
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional: Bootstrap JS bundle for features like dropdowns, though not strictly needed for this layout -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
