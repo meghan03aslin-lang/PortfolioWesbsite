@@ -1,2 +1,2 @@
 # PortfolioWesbsite
-Random display of photography, campaign work, and floral design.
+Diverse display of Meghan Aslin's photography, campaign work, and floral design.
